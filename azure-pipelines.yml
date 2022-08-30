@@ -21,7 +21,7 @@ steps:
   inputs:
     command: build
     #projects: '**/*.csproj'
-    projects: 'Package/Core/Core.MVVM/*.csproj'
+    projects: 'Package/Core/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
   # my working directory is src
   
@@ -30,7 +30,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: 'Package/Core/Core.MVVM/*.csproj'
+    packagesToPack: 'Package/Core/*.csproj'
     packDestination: '$(Build.ArtifactStagingDirectory)'
 
 - task: NuGetAuthenticate@0
