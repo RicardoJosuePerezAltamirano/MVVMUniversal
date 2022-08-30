@@ -1,15 +1,23 @@
-﻿namespace MAUIApp
+﻿
+using MAUIApp.ViewModels;
+
+namespace MAUIApp
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
 
-        public MainPage()
+        //LoginViewModel ViewModel;
+        MainViewModel MainViewModel;
+        public MainPage( MainViewModel MainViewModel_)
         {
             InitializeComponent();
+            //ViewModel = ViuewModel_;
+            MainViewModel = MainViewModel_;
+            BindingContext = MainViewModel;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
 
@@ -19,6 +27,10 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+           // ViewModel.User = "perro";
+           // ViewModel.Password = "perro";
+           // await ViewModel.LoginCommand.ExecuteAsync();
+
         }
     }
 }
