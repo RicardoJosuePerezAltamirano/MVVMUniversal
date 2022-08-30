@@ -41,6 +41,6 @@ steps:
   inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
-    publishVstsFeed: 'NugetArtifactMVVMUniversal/PublicPackagesV2'
+    publishVstsFeed: 'NugetArtifactMVVMUniversal/PublicPackagesV3'
     nugetConfigPath: '$(Build.WorkingDirectory)/NuGet.config'
     allowPackageConflicts: true
