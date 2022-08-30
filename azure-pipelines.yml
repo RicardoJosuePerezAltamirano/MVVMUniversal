@@ -30,7 +30,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'pack'
-    packagesToPack: 'Package/Core/**/*.csproj'
+    packagesToPack: 'Package/Core/Core.MVVM/*.csproj'
     packDestination: '$(Build.ArtifactStagingDirectory)'
 
 - task: NuGetAuthenticate@0
