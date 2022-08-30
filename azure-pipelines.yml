@@ -13,8 +13,16 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+#- script: dotnet build --configuration $(buildConfiguration)
+#  displayName: 'dotnet build $(buildConfiguration)'
+  
+- task: DotNetCoreCLI@2
+  displayName: Build
+  inputs:
+    command: build
+    #projects: '**/*.csproj'
+    projects: 'Package/Core/Core.MVVM/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
   # my working directory is src
   
 
