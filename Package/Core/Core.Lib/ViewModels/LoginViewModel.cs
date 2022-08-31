@@ -36,7 +36,7 @@ namespace Core.ViewModels
                 if (isValid)
                 {
                     Messagge = name;
-                    await DependencyService.Get<INavigationService>().NavigateTo(PagesKeys.Crud);
+                    //await DependencyService.Get<INavigationService>().NavigateTo(PagesKeys.Crud); comentado para pruebas en MAUI
                 }
                 else
                 {
