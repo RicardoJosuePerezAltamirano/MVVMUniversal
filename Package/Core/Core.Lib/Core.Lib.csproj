@@ -10,6 +10,7 @@
     <Company>Sysne Automatizacion de Mexico S.A. de C.V.</Company>
     <Product>Core.Lib.MVVMUniversal</Product>
      <AssemblyName>Core.Lib.MVVMUniversal</AssemblyName>
+     <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

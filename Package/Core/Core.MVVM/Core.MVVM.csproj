@@ -12,6 +12,7 @@
 Xamarin-MAUI / Blazor / Winforms </Description>
     <PackageTags>mvvm;universal; mvvm universal; mvvm maui</PackageTags>
     <PackageReleaseNotes>version de empaquetado actualizada a Net 6 con soporte MAUI</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
