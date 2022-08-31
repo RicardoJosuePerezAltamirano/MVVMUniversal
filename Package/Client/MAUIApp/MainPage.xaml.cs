@@ -1,4 +1,6 @@
 ﻿
+
+using Core.ViewModels;
 using MAUIApp.ViewModels;
 
 namespace MAUIApp
@@ -7,13 +9,15 @@ namespace MAUIApp
     {
         int count = 0;
 
-        //LoginViewModel ViewModel;
+        LoginViewModel ViewModel;
         MainViewModel MainViewModel;
-        public MainPage( MainViewModel MainViewModel_)
+        public MainPage( MainViewModel MainViewModel_, LoginViewModel ViewModel_)
         {
             InitializeComponent();
-            //ViewModel = ViuewModel_;
+            ViewModel = ViewModel_;
             MainViewModel = MainViewModel_;
+            ViewModel.Messagge = " LoginViewModel";
+            MainViewModel.Message += ViewModel.Messagge;
             BindingContext = MainViewModel;
         }
 
@@ -27,6 +31,7 @@ namespace MAUIApp
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+
            // ViewModel.User = "perro";
            // ViewModel.Password = "perro";
            // await ViewModel.LoginCommand.ExecuteAsync();

@@ -25,7 +25,11 @@ namespace BlazorApp
             builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
             using var httpClient = new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) };
-            SettingsStorage.CurrentValues = await httpClient.GetFromJsonAsync<SettingsStorage.Values>("settings.json");
+            
+            var a= await httpClient.GetFromJsonAsync<SettingsStorage.Values>("settings.json");
+            Console.WriteLine(a.WebAPIUrl);
+            Console.WriteLine(a.ToString());
+            SettingsStorage.CurrentValues = a;
 
             DependencyService.Register<SettingsStorage, ISettingsStorage>();
             DependencyService.Register<NavigationService, INavigationService>(DependencyService.ServiceLifetime.Singleton);

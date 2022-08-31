@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Core.Lib.OS
 {
-	interface INavigationService
+	public interface INavigationService
 	{
 		/// <summary>Navigate to previous view</summary>
 		/// <returns></returns>

@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Core.Lib.MVVMUniversal" Version="1.0.0" />
 	  <PackageReference Include="Core.MVVM" Version="1.0.0" />
 	</ItemGroup>
 

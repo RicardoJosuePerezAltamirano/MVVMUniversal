@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Core.Lib.OS
 {
-    interface ISettingsStorage
+    public interface ISettingsStorage
     {
         void SetValue<T>(T newValue = default, [CallerMemberName] string propertyName = null);
 
